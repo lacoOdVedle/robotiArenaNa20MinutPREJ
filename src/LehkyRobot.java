@@ -14,7 +14,7 @@ public class LehkyRobot extends Robot {
     @Override
     public void prijmoutZasah(int sila) {
         setBodyEnergie(getBodyEnergie()-sila);
-        System.out.println("lehky robot prijmul ztasah - " + sila);
+        System.out.println("lehky robot prijmul zasah - " + sila);
         System.out.println("lehky robot ma energie - " + this.getBodyEnergie());
     }
 

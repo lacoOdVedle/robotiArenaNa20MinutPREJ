@@ -13,8 +13,14 @@ public class ObrnenyRobot extends Robot {
 
     @Override
     public void prijmoutZasah(int sila) {
-        setBodyEnergie(getBodyEnergie()-(sila-10));
-        System.out.println("obrneny robot prijmul ztasah - " + sila);
-        System.out.println("obrneny robot ma energie - " + this.getBodyEnergie());
+        setBodyEnergie(getBodyEnergie()-Math.max(0,sila-10));
+        System.out.println("obrneny robot prijmul zasah - " + Math.max(0, sila - 10));
+        if (this.getBodyEnergie() <= 0) {
+            setBodyEnergie(0);
+            System.out.println("obrneny robot ma energie - " + this.getBodyEnergie());
+        } else {
+            System.out.println("obrneny robot ma energie - " + this.getBodyEnergie());
+        }
+
     }
 }
